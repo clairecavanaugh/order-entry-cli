@@ -1,0 +1,12 @@
+# Credentials - never commit
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.DS_Store
