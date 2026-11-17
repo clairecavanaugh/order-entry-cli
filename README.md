@@ -70,7 +70,141 @@ python order_entry.py
 ### Terminal output: successful insertion and verification
 
 ```
-(paste your terminal output here, or add a screenshot)
+=== Campus Store Order Entry ===
+
+CUSTOMERS
+Customer ID | Customer Name
+------------+--------------
+          1 | Avery Morgan 
+          2 | Jordan Patel 
+          3 | Taylor Chen  
+          4 | Casey Rivera 
+          5 | Riley Brooks 
+          6 | Morgan Lee   
+          7 | Jamie Wilson 
+          8 | Alex Kim     
+          9 | Cameron Davis
+         10 | Quinn Garcia 
+         11 | Sam Parker   
+         12 | Drew Johnson 
+         13 | Skyler Reed  
+         14 | Reese Martin 
+         15 | Rowan Lewis  
+         16 | Peyton Clark 
+         17 | Finley Hall  
+         18 | Emerson Young
+         19 | Dakota Allen 
+         20 | Harper Scott 
+
+PRODUCTS
+Product ID | Product Name   |  Price
+-----------+----------------+-------
+         1 | Notebook       |  $4.50
+         2 | Pen Set        |  $6.00
+         3 | Backpack       | $45.00
+         4 | Water Bottle   | $18.00
+         5 | Hoodie         | $39.00
+         6 | T-Shirt        | $19.00
+         7 | USB Drive      | $12.50
+         8 | Wireless Mouse | $24.00
+         9 | Desk Lamp      | $29.00
+        10 | Coffee Mug     | $10.00
+        11 | Planner        | $15.00
+        12 | Laptop Stand   | $35.00
+
+--- NEW ORDER ---
+Enter the customer ID: hello          
+  'hello' is not a valid customer ID. Please enter a whole number from the customer table.
+Enter the customer ID: 99
+  There is no customer with ID 99. Please choose an ID from the customertable.
+Enter the customer ID: 1
+Enter the product ID: 42
+  There is no product with ID 42. Please choose an ID from the product table.
+Enter the product ID: 7
+Enter the quantity: 0
+  Quantity must be greater than zero.
+Enter the quantity: 2
+
+ORDER SUMMARY
+  Customer:   Avery Morgan
+  Product:    USB Drive
+  Quantity:   2
+  Unit price: $12.50
+  Total:      $25.00
+
+Confirm this purchase? (Y/N): 3
+  Please enter Y for yes or N for no.
+
+Confirm this purchase? (Y/N): n
+Order cancelled. Nothing was saved.
+
+Would you like to enter another order? (Y/N): y
+
+CUSTOMERS
+Customer ID | Customer Name
+------------+--------------
+          1 | Avery Morgan 
+          2 | Jordan Patel 
+          3 | Taylor Chen  
+          4 | Casey Rivera 
+          5 | Riley Brooks 
+          6 | Morgan Lee   
+          7 | Jamie Wilson 
+          8 | Alex Kim     
+          9 | Cameron Davis
+         10 | Quinn Garcia 
+         11 | Sam Parker   
+         12 | Drew Johnson 
+         13 | Skyler Reed  
+         14 | Reese Martin 
+         15 | Rowan Lewis  
+         16 | Peyton Clark 
+         17 | Finley Hall  
+         18 | Emerson Young
+         19 | Dakota Allen 
+         20 | Harper Scott 
+
+PRODUCTS
+Product ID | Product Name   |  Price
+-----------+----------------+-------
+         1 | Notebook       |  $4.50
+         2 | Pen Set        |  $6.00
+         3 | Backpack       | $45.00
+         4 | Water Bottle   | $18.00
+         5 | Hoodie         | $39.00
+         6 | T-Shirt        | $19.00
+         7 | USB Drive      | $12.50
+         8 | Wireless Mouse | $24.00
+         9 | Desk Lamp      | $29.00
+        10 | Coffee Mug     | $10.00
+        11 | Planner        | $15.00
+        12 | Laptop Stand   | $35.00
+
+--- NEW ORDER ---
+Enter the customer ID: 4
+Enter the product ID: 7
+Enter the quantity: 6
+
+ORDER SUMMARY
+  Customer:   Casey Rivera
+  Product:    USB Drive
+  Quantity:   6
+  Unit price: $12.50
+  Total:      $75.00
+
+Confirm this purchase? (Y/N): y
+
+Success! Order 1002 was saved to Supabase.
+
+VERIFIED ORDER (retrieved from Supabase)
+Order ID | Customer     | Product   | Quantity | Unit Price |  Total | Order Date
+---------+--------------+-----------+----------+------------+--------+-----------
+    1002 | Casey Rivera | USB Drive |        6 |     $12.50 | $75.00 | 2026-11-17
+
+Would you like to enter another order? (Y/N): n
+Goodbye!
+(.venv) clairecavanaugh@claires-air order-entry-cli % 
+
 ```
 
 ## Libraries and techniques beyond class material
